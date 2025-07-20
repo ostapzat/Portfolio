@@ -1,0 +1,43 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+
+
+    &_github {
+        width: 35px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        font-size: 16px;
+        font-weight: unset;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 8px;
+    }
+
+    &_rights {
+        span {
+            font-weight: 900;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_header {
+        text-align: center;
+    }
+}

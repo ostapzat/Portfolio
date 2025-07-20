@@ -1,0 +1,137 @@
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    position: relative;
+
+    &_header {
+        text-shadow: 3px 3px 5px $main-orange;
+
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        flex: 1 1 45%;
+
+        p {
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+
+
+        .description {
+            font-size: 21px;
+            margin-top: 20px;
+        }
+
+        .github {
+            display: inline-block;
+            margin-top: 20px;
+
+
+        }
+    }
+
+    #github {
+        width: 50px;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    &__image {
+        flex: 1 1 45%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 60%;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .orange-circle {
+            background-color: $main-orange;
+        }
+
+        .one {
+            width: 120px;
+            height: 120px;
+            top: -40px;
+            left: -40px;
+        }
+
+        .two {
+            width: 120px;
+            height: 120px;
+            bottom: -40px;
+            right: -40px;
+        }
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+
+        &__text,
+        &__image {
+            flex: 1 1 100%;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .description {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 1065px) {
+    .intro__image .two {
+        right: 4px;
+    }
+}
+
+@media (max-width: 476px) {
+    .intro-wrapper {
+        flex-direction: column;
+    }
+
+    .intro__image,
+    .intro__text {
+        flex: 1 1 100%;
+        text-align: center;
+
+    }
+
+    .intro {
+        padding: 24px 0;
+    }
+
+    .intro__image img {
+        width: 52%;
+    }
+}
